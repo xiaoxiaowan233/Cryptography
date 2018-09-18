@@ -4,7 +4,7 @@
 
 通过将字母表“平移”来加密，密钥为平移的位数，这里是“3”
 
-![C2_Caesar](/Users/liurenwan/Documents/Cryptography/image/C2_Caesar.png)
+![C2_Caesar](image/C2_Caesar.png)
 
 对“yoshiko”加密
 
@@ -30,7 +30,7 @@ o -> R
 
 凯撒密码是简单替换密码的一种，密钥是：替换表
 
-![C2_simple](/Users/liurenwan/Documents/Cryptography/image/C2_simple.png)
+![C2_simple](image/C2_simple.png)
 
 简单替换密码的密钥空间：26!，几乎不能暴力破解
 
