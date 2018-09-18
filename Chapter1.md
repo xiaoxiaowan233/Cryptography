@@ -10,7 +10,7 @@
 
 密钥：类似于现实生活中开锁需要钥匙，解密也需要钥匙即`密钥`
 
-![secretKey](/Users/liurenwan/Documents/Cryptography/image/secretKey.png)
+![C1_secretKey](image/C1_secretKey.png)
 
 
 
@@ -24,7 +24,7 @@
 
 ### 其他密码技术
 
-![C1_is](/Users/liurenwan/Documents/Cryptography/image/C1_is.png)
+![C1_is](image/C1_is.png)
 
 认证：消息是否来自于期待的对象
 
