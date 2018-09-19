@@ -10,7 +10,7 @@ DES以64比特为一个分组进行加密，它是分组密码的一种。
 
 ## 加密与解密
 
-![C3_des_encrypt](/Users/liurenwan/Documents/Cryptography/image/C3_des_encrypt.png)
+![C3_des_encrypt](image/C3_des_encrypt.png)
 
 
 
@@ -36,40 +36,40 @@ DES的基本结构是Feistel网络，加密的各个步骤称为轮，下图为F
 
 ## 子密钥生成过程
 
-![C3_sub_key](/Users/liurenwan/Documents/Cryptography/image/C3_sub_key.png)
+![C3_sub_key](image/C3_sub_key.png)
 
 
 
 (1)PC-1密钥置换函数
 
-![C3_des1](/Users/liurenwan/Documents/Cryptography/image/C3_des1.png)
+![C3_des1](image/C3_des1.png)
 
 由表可知，初始密钥的校验位被去掉，剩余的56位按上表的排列方式：第57位在第1位，第49位在第2位。经过密钥置换函数后，将置换输出分为28位C0和D0两部分，分别循环左移1位得到C1和D1，将两部分合并为56位，然后经过PC-2变换之后生成48位子密钥K1。
 
-![C3_des_pc2](/Users/liurenwan/Documents/Cryptography/image/C3_des_pc2.png)
+![C3_des_pc2](image/C3_des_pc2.png)
 
 依次类推，直到生成子密钥K16，但每轮循环移位的位数有如下规定。
 
-![C3_des_ls](/Users/liurenwan/Documents/Cryptography/image/C3_des_ls.png)
+![C3_des_ls](image/C3_des_ls.png)
 
 
 
 ## 加密过程
 
-![C3_encrypt0](/Users/liurenwan/Documents/Cryptography/image/C3_encrypt0.png)
+![C3_encrypt0](image/C3_encrypt0.png)
 
 ### 加密详解
 
 1. 初始置换：64位明文串经过一个置换函数IP，置换后得到64位输出，分为32位L0和32位R0
 
-![C3_encrypt1](/Users/liurenwan/Documents/Cryptography/image/C3_encrypt1.png)
+![C3_encrypt1](image/C3_encrypt1.png)
 
 
 
 2. R0与子密钥K1经过密码函数变换F(R0,K1)得到32位输出，32位输出与L0异或，结果赋给R1，R0原封不动赋给L1。依次类推，最后生成L16和R16
 3. 末置换：L16和R16经过末置换函数得到64位密文输出
 
-![C3_encrypt2](/Users/liurenwan/Documents/Cryptography/image/C3_encrypt2.png)
+![C3_encrypt2](image/C3_encrypt2.png)
 
 
 
@@ -81,11 +81,11 @@ DES的基本结构是Feistel网络，加密的各个步骤称为轮，下图为F
 
 扩展置换：32位数据通过扩展置换（重复某些位），得到48位输出
 
-![C3_encrypt3](/Users/liurenwan/Documents/Cryptography/image/C3_encrypt3.png)
+![C3_encrypt3](image/C3_encrypt3.png)
 
 扩展置换得到的E与K进行异或得到48位数据，将48位数据分成B1 ~ B8组，经过S盒代替得到最终输出
 
-![C3_encrypt4](/Users/liurenwan/Documents/Cryptography/image/C3_encrypt4.png)
+![C3_encrypt4](image/C3_encrypt4.png)
 
 S盒代替：S盒是一个4行16列的二维数组，每个元素值是16以内的整数。DES设计了8个不同的S盒。
 
