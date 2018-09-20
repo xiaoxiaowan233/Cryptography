@@ -133,7 +133,7 @@ OFB模式加密：
 
 OFB模式解密：
 
-![C4_OFB_decode](/Users/liurenwan/Documents/Cryptography/image/C4_OFB_decode.png)
+![C4_OFB_decode](image/C4_OFB_decode.png)
 
 ### OFB模式与CFB模式
 
