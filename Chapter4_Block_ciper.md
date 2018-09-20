@@ -121,10 +121,41 @@ CFB模式中，明文可以逐比特进行加密，可以将CFB模式看作一�
 
 重放攻击
 
-![C4_CFB_attack](image/C4_CFB_attack.png)
+![bC4_CFB_attack](image/C4_CFB_attack.png)
 
 
 
 ## OFB模式
 
-OFB模式
+OFB模式加密：
+
+![C4_OFB_encrypt](image/C4_OFB_encrypt.png)
+
+OFB模式解密：
+
+![C4_OFB_decode](/Users/liurenwan/Documents/Cryptography/image/C4_OFB_decode.png)
+
+### OFB模式与CFB模式
+
+OFB模式与CFB模式加密的区别仅在于密码算法的输入。CFB模式是对密文进行反馈的，因此加密时必须按明文顺序进行加密。而在OFB模式中，可以事先通过密码算法生成密钥流。
+
+
+
+## CTR模式
+
+CTR模式加密
+
+![C4_CTR_encrypt](image/C4_CTR_encrypt.png)
+
+CTR模式解密：
+
+![C4_CTR_decode](image/C4_CTR_decode.png)
+
+### CTR与OFB模式
+
+两者都属于流密码，加密解密形式完全一样，编程易实现
+
+
+
+
+
